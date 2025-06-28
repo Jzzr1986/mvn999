@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gstartdocker
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gstartdocker
+  template:
+    metadata:
+      labels:
+        app: gstartdocker
+    spec:
+      containers:
+      - name: gstartdocker
+        image: docker/getting-started:latest
+        ports:
+        - containerPort: 8686  # 假设应用监听 8080 端口（按需修改）
+        command: ["sleep", "infinity"]  # 保持容器运行（仅测试用）

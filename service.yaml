@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: gstartdocker
+  namespace: default
+spec:
+  selector:
+    app: gstartdocker  # 匹配 Deployment 的标签
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8686  # 与 Deployment 的 containerPort 一致
+  type: NodePort  # 方便本地访问（或 LoadBalancer/ClusterIP）
