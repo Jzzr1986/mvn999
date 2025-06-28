@@ -9,5 +9,5 @@ spec:
   ports:
     - protocol: TCP
       port: 80
-      targetPort: 8686  # 与 Deployment 的 containerPort 一致
+      targetPort: 80  # 与 Deployment 的 containerPort 一致
   type: NodePort  # 方便本地访问（或 LoadBalancer/ClusterIP）
