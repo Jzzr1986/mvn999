@@ -18,4 +18,3 @@ spec:
         image: docker/getting-started:latest
         ports:
         - containerPort: 80  # 假设应用监听 8080 端口（按需修改）
-        command: ["sleep", "infinity"]  # 保持容器运行（仅测试用）
